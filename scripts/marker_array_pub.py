@@ -16,7 +16,7 @@ class MarkerArrayPub:
 
     def update(self, event):
         msg = MarkerArray()
-        for i in range(4):
+        for i in range(16):
             marker = Marker()
             marker.header.frame_id = 'map'
             marker.header.stamp = event.current_real
@@ -31,7 +31,7 @@ class MarkerArrayPub:
             marker.scale.x = 0.01
             marker.scale.y = 0.0
             marker.scale.z = 0.0
-            for j in range(1000):
+            for j in range(5000):
                 pt = Point()
                 fr = float(j) / 200.0
                 # spiral
